@@ -21,6 +21,7 @@
 		181253AA193A031F00742B4B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1812538C193A031F00742B4B /* UIKit.framework */; };
 		181253B2193A031F00742B4B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 181253B0193A031F00742B4B /* InfoPlist.strings */; };
 		181253B4193A031F00742B4B /* batteryLevelTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 181253B3193A031F00742B4B /* batteryLevelTestTests.m */; };
+		181253C1193A036900742B4B /* IOKit in Frameworks */ = {isa = PBXBuildFile; fileRef = 181253BE193A036900742B4B /* IOKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,9 @@
 		181253AF193A031F00742B4B /* batteryLevelTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "batteryLevelTestTests-Info.plist"; sourceTree = "<group>"; };
 		181253B1193A031F00742B4B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		181253B3193A031F00742B4B /* batteryLevelTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = batteryLevelTestTests.m; sourceTree = "<group>"; };
+		181253BE193A036900742B4B /* IOKit */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = IOKit; sourceTree = "<group>"; };
+		181253BF193A036900742B4B /* IOPowerSources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOPowerSources.h; sourceTree = "<group>"; };
+		181253C0193A036900742B4B /* IOPSKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOPSKeys.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1812538B193A031F00742B4B /* CoreGraphics.framework in Frameworks */,
+				181253C1193A036900742B4B /* IOKit in Frameworks */,
 				1812538D193A031F00742B4B /* UIKit.framework in Frameworks */,
 				18125389193A031F00742B4B /* Foundation.framework in Frameworks */,
 			);
@@ -112,6 +117,7 @@
 		1812538E193A031F00742B4B /* batteryLevelTest */ = {
 			isa = PBXGroup;
 			children = (
+				181253BD193A034400742B4B /* IO */,
 				18125397193A031F00742B4B /* AppDelegate.h */,
 				18125398193A031F00742B4B /* AppDelegate.m */,
 				1812539A193A031F00742B4B /* Main.storyboard */,
@@ -150,6 +156,16 @@
 				181253B0193A031F00742B4B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		181253BD193A034400742B4B /* IO */ = {
+			isa = PBXGroup;
+			children = (
+				181253BE193A036900742B4B /* IOKit */,
+				181253BF193A036900742B4B /* IOPowerSources.h */,
+				181253C0193A036900742B4B /* IOPSKeys.h */,
+			);
+			name = IO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -379,6 +395,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "batteryLevelTest/batteryLevelTest-Prefix.pch";
 				INFOPLIST_FILE = "batteryLevelTest/batteryLevelTest-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/batteryLevelTest",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -392,6 +412,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "batteryLevelTest/batteryLevelTest-Prefix.pch";
 				INFOPLIST_FILE = "batteryLevelTest/batteryLevelTest-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/batteryLevelTest",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
